@@ -322,6 +322,7 @@ table a{
 }
 
 #modal h2{
+	color: #333333;
 	margin-top:1.5em;
 }
 
@@ -331,12 +332,14 @@ table a{
 }
 
 #modal-footer{
+	color: #333333;
     display:flex;
     font-size:2em;
     justify-content: flex-start;
 }
 
 #modal-footer a{
+	color: #333333;
     margin-right:0.25em;
 }
 

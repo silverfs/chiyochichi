@@ -1,17 +1,17 @@
-## SUI
-*a startpage for your server and / or new tab page*
+# Chiyochichi
+*A simple startpage for your server and / or new tab page.*
 
 ![screenshot](https://i.imgur.com/J4d7Q3D.png)
 
-[More screenshots](https://imgur.com/a/FDVRIyw)
+Inspired by [SUI](https://github.com/jeroenpardon/sui), I wanted to personally continue this fun little project.
 
-### Deploy with Docker compose
+## Deploy with Docker compose
 
-#### Prerequisites:
+### Prerequisites:
  - Docker: [Linux](https://docs.docker.com/install/linux/docker-ce/debian/), [Mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac), [Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
  - [Docker-compose](https://docs.docker.com/compose/install/)
 
-#### Install:
+### Install:
 
  - `git clone` this repository
  - Build and bring up with `docker-compose up -d`
@@ -22,22 +22,13 @@ To run at a different port open edit docker-compose.yml:
     ports:
           - 4000:80
 
-#### Install pull from git variant:
 
- - refreshs source code every 5 minutes from master branch you provided - convenience feature for lacy devs
- - `git clone` this repository
- - build image `docker build -f DockerfilePullFromGit -t sui:latest .`
- - run image with `docker run -e GITURL='https://x:ghp_x@github.com/jeroenpardon/sui.git' -p 8081:80 sui:latest`
- - can be run also with a private repository by setting username:api-key@ in the url (see above example). Otherwise remove this part of the url.
- 
+## Customization
 
-
-### Customization
-
-#### Changing color themes
+### Changing color themes
  - Click the options button on the left bottom
 
-#### Apps
+### Apps
 Add your apps by editing apps.json:
 
     {
@@ -53,7 +44,7 @@ Please note:
  - No `,` at the end of the last app's line
  - Find the names  of icons to use at [Material Design Icons](https://materialdesignicons.com/)
 
-#### Bookmarks
+### Bookmarks
 Add your bookmarks by editing links.json:
 
 ```
@@ -97,7 +88,7 @@ Please note:
  - No `,` at the end of the last bookmark in a category and at the end of the last category
 
 
-#### Color themes
+### Color themes
 These can be added or customized in the themer.js file. When changing the name of a theme or adding one, make sure to edit this section in index.html accordingly:
 
 ```

@@ -18,7 +18,7 @@ function greet() {
       document.getElementById("header_greet").innerHTML = "Good night!";
       break;
     case 1:
-      document.getElementById("header_greet").innerHTML = "Good morning!";
+      document.getElementById("header_greet").innerHTML = "Haro Everynyan!";
       break;
     case 2:
       document.getElementById("header_greet").innerHTML = "Good afternoon!";
