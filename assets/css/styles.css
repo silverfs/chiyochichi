@@ -405,7 +405,15 @@ table a{
 	line-height: 3em;
 	text-align: center;
 	text-transform: uppercase;
+	margin: 4px 2px;
+	border-radius: 16px;
+	cursor: pointer;
+	transition: all .3s linear;
 }
+
+.theme-button:hover{
+	transform: translatey(5px)
+  }
 
 .theme-blackboard{
 	background-color: #000000;
