@@ -232,10 +232,21 @@ table a{
 	overflow: hidden;
 }
 
+/* .apps_upper_link{
+	display: inline-block;
+} */
+
 .apps_text a{
 	font-size: 1em;
 	font-weight: 500;
 	text-transform: uppercase;
+}
+
+.apps_content{
+	font-size: 1em;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin: 0;
 }
 
 .apps_text span{
