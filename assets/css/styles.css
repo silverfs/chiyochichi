@@ -305,8 +305,9 @@ table a{
 }
 
 #modal>div{
-	background-color: #ffffff;
-	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.25);
+	/* background-color: #ffffff; */
+	background-color: var(--color-background);
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.30), 0 10px 30px rgba(0, 0, 0, 0.25);
 	margin-left: auto;
     margin-right: auto;
 	padding: 2em;
@@ -317,13 +318,27 @@ table a{
 }
 
 #modal h1{
-	color: #333333;
+	/* color: #333333; */
+	color: var(--color-text-pri);
 	font-size: 2em;
 }
 
 #modal h2{
-	color: #333333;
+	/* color: #333333; */
+	color: var(--color-text-pri);
 	margin-top:1.5em;
+}
+
+#modal th{
+	color: var(--color-text-pri);
+}
+
+#modal td{
+	color: var(--color-text-pri);
+}
+
+#modal a{
+	color: var(--color-text-pri);
 }
 
 #modal-header{
@@ -332,26 +347,30 @@ table a{
 }
 
 #modal-footer{
-	color: #333333;
+	/* color: #333333; */
+	color: var(--color-text-pri);
     display:flex;
     font-size:2em;
     justify-content: flex-start;
 }
 
 #modal-footer a{
-	color: #333333;
+	/* color: #333333; */
+	color: var(--color-text-pri);
     margin-right:0.25em;
 }
 
 .modal-close{
-	color: #000000;
+	/* color: #000000; */
+	color: var(--color-text-acc);
 	font-size: 1.5em;
 	text-align: center;
 	text-decoration: none;
 }
 
 .modal-close:hover{
-	color: #000;
+	/* color: #000; */
+	color: var(--color-text-pri);
 }
 
 #modal_init a{
