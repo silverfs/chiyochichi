@@ -222,6 +222,11 @@ table a{
 	flex-wrap: wrap;
 	height: 64px;
 	margin: 0;
+	transition: all .3s linear;
+}
+
+.apps_item:hover{
+	transform: translatey(5px);
 }
 
 .apps_text{
@@ -236,10 +241,11 @@ table a{
 	display: inline-block;
 } */
 
-.apps_text a{
+.apps_text a, a:hover, a:visited, a:link, a:active{
 	font-size: 1em;
 	font-weight: 500;
 	text-transform: uppercase;
+	text-decoration: none;
 }
 
 .apps_content{
