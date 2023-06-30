@@ -1,6 +1,6 @@
 FROM busybox
 LABEL maintainer="SilverFS"
-LABEL description="Forked from jeroenpardon/sui, this project exists as a personal continuation."
+LABEL description="A simple startpage."
 
 WORKDIR /opt/html
 COPY . /opt/html
