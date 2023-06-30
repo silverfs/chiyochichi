@@ -428,6 +428,10 @@ table a{
 	text-decoration: none;
 }
 
+.modal-close .iconify {
+	font-size: 2em;
+}
+
 .modal-close:hover{
 	/* color: #000; */
 	color: var(--color-text-pri);
