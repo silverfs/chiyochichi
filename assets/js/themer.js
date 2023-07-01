@@ -10,8 +10,8 @@ const setValue = (property, value) => {
     }
 };
 
-const setValueFromLocalStorage = property => {
-    let value = localStorage.getItem(property);
+const setValueFromLocalStorage = (property, defaultValue = null) => {
+    let value = localStorage.getItem(property) || defaultValue;
     setValue(property, value);
 };
 
@@ -26,9 +26,9 @@ const setTheme = options => {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    setValueFromLocalStorage('color-background');
-    setValueFromLocalStorage('color-text-pri');
-    setValueFromLocalStorage('color-text-acc');
+    setValueFromLocalStorage('color-background', '#F8F6F1');
+    setValueFromLocalStorage('color-text-pri', '#4C432E');
+    setValueFromLocalStorage('color-text-acc', '#AA9A73');
 });
 
 const dataThemeButtons = document.querySelectorAll('[data-theme]');
