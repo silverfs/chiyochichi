@@ -4,8 +4,7 @@ services:
   cat:
     container_name: chiyochichi
     restart: always
-    build:
-      context: ./
+    image: ghcr.io/silverfs/chiyochichi:master
     ports:
       - 3006:80
     volumes:
