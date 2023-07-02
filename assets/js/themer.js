@@ -29,6 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
     setValueFromLocalStorage('color-background', '#F8F6F1');
     setValueFromLocalStorage('color-text-pri', '#4C432E');
     setValueFromLocalStorage('color-text-acc', '#AA9A73');
+
+    setValueFromLocalStorage('image-background');
 });
 
 const dataThemeButtons = document.querySelectorAll('[data-theme]');
@@ -37,7 +39,7 @@ for (let i = 0; i < dataThemeButtons.length; i++) {
     dataThemeButtons[i].addEventListener('click', () => {
         const theme = dataThemeButtons[i].dataset.theme;
 
-        switch (theme) {
+        switch (theme) {                
             case 'blackboard':
                 setTheme({
                     'color-background': '#1a1a1a',
@@ -131,6 +133,14 @@ for (let i = 0; i < dataThemeButtons.length; i++) {
                     'color-background': '#F8F6F1',
                     'color-text-pri': '#4C432E',
                     'color-text-acc': '#AA9A73'
+                });
+                return;
+            case 'chiyochichi':
+                setTheme({
+                    'image-background': 'url(/assets/img/neko_background.png)',
+                    'color-background': 'pink',
+                    'color-text-pri': '#af616a',
+                    'color-text-acc': '#898b90'
                 });
                 return;
 
