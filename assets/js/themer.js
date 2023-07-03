@@ -20,8 +20,13 @@ const setTheme = options => {
         const property = option;
         const value = options[option];
 
-        setValue(property, value);
-        localStorage.setItem(property, value);
+        if (value !== undefined) {
+            setValue(property, value);
+            localStorage.setItem(property, value);
+        } else {
+            localStorage.removeItem(property);
+            document.documentElement.style.removeProperty(`--${property}`);
+        }
     }
 }
 
@@ -42,6 +47,7 @@ for (let i = 0; i < dataThemeButtons.length; i++) {
         switch (theme) {                
             case 'blackboard':
                 setTheme({
+                    'image-background': undefined,
                     'color-background': '#1a1a1a',
                     'color-text-pri': '#FFFDEA',
                     'color-text-acc': '#5c5c5c'
@@ -50,6 +56,7 @@ for (let i = 0; i < dataThemeButtons.length; i++) {
 
             case 'gazette':
                 setTheme({
+                    'image-background': undefined,
                     'color-background': '#F2F7FF',
                     'color-text-pri': '#000000',
                     'color-text-acc': '#5c5c5c'
@@ -58,6 +65,7 @@ for (let i = 0; i < dataThemeButtons.length; i++) {
 
             case 'espresso':
                 setTheme({
+                    'image-background': undefined,
                     'color-background': '#21211F',
                     'color-text-pri': '#D1B59A',
                     'color-text-acc': '#4E4E4E'
@@ -66,6 +74,7 @@ for (let i = 0; i < dataThemeButtons.length; i++) {
 
             case 'cab':
                 setTheme({
+                    'image-background': undefined,
                     'color-background': '#F6D305',
                     'color-text-pri': '#1F1F1F',
                     'color-text-acc': '#424242'
@@ -74,6 +83,7 @@ for (let i = 0; i < dataThemeButtons.length; i++) {
 
             case 'cloud':
                 setTheme({
+                    'image-background': undefined,
                     'color-background': '#f1f2f0',
                     'color-text-pri': '#35342f',
                     'color-text-acc': '#37bbe4'
@@ -82,6 +92,7 @@ for (let i = 0; i < dataThemeButtons.length; i++) {
 
             case 'lime':
                 setTheme({
+                    'image-background': undefined,
                     'color-background': '#263238',
                     'color-text-pri': '#AABBC3',
                     'color-text-acc': '#aeea00'
@@ -90,6 +101,7 @@ for (let i = 0; i < dataThemeButtons.length; i++) {
 
             case 'white':
                 setTheme({
+                    'image-background': undefined,
                     'color-background': '#ffffff',
                     'color-text-pri': '#222222',
                     'color-text-acc': '#dddddd'
@@ -98,6 +110,7 @@ for (let i = 0; i < dataThemeButtons.length; i++) {
 
             case 'tron':
                 setTheme({
+                    'image-background': undefined,
                     'color-background': '#242B33',
                     'color-text-pri': '#EFFBFF',
                     'color-text-acc': '#6EE2FF'
@@ -106,6 +119,7 @@ for (let i = 0; i < dataThemeButtons.length; i++) {
             
             case 'blues':
                 setTheme({
+                    'image-background': undefined,
                     'color-background': '#2B2C56',
                     'color-text-pri': '#EFF1FC',
                     'color-text-acc': '#6677EB'
@@ -114,6 +128,7 @@ for (let i = 0; i < dataThemeButtons.length; i++) {
             
             case 'passion':
                 setTheme({
+                    'image-background': undefined,
                     'color-background': '#f5f5f5',
                     'color-text-pri': '#12005e',
                     'color-text-acc': '#8e24aa'
@@ -122,6 +137,7 @@ for (let i = 0; i < dataThemeButtons.length; i++) {
             
             case 'chalk':
                 setTheme({
+                    'image-background': undefined,
                     'color-background': '#263238',
                     'color-text-pri': '#AABBC3',
                     'color-text-acc': '#FF869A'
@@ -130,6 +146,7 @@ for (let i = 0; i < dataThemeButtons.length; i++) {
             
             case 'paper':
                 setTheme({
+                    'image-background': undefined,
                     'color-background': '#F8F6F1',
                     'color-text-pri': '#4C432E',
                     'color-text-acc': '#AA9A73'
